@@ -14,7 +14,8 @@
 		150EA3641CB4FA860006090F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 150EA3621CB4FA860006090F /* LaunchScreen.storyboard */; };
 		150EA36F1CB4FA870006090F /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 150EA36E1CB4FA870006090F /* ____Tests.m */; };
 		150EA37A1CB4FA870006090F /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 150EA3791CB4FA870006090F /* ____UITests.m */; };
-		150EA3D31CB50A3B0006090F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150EA3D21CB50A3B0006090F /* RootViewController.m */; };
+		1586657C1CB602D500F85DA5 /* UIImage+LSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1586657B1CB602D500F85DA5 /* UIImage+LSImage.m */; };
+		15F25F3F1CB5FD7B009A016E /* LSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F25F3E1CB5FD7B009A016E /* LSTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +50,10 @@
 		150EA3751CB4FA870006090F /* 梁森微博UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "梁森微博UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		150EA3791CB4FA870006090F /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		150EA37B1CB4FA870006090F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		150EA3D11CB50A3B0006090F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		150EA3D21CB50A3B0006090F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		1586657A1CB602D500F85DA5 /* UIImage+LSImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LSImage.h"; sourceTree = "<group>"; };
+		1586657B1CB602D500F85DA5 /* UIImage+LSImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LSImage.m"; sourceTree = "<group>"; };
+		15F25F3D1CB5FD7B009A016E /* LSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTabBarController.h; sourceTree = "<group>"; };
+		15F25F3E1CB5FD7B009A016E /* LSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,10 @@
 		150EA3451CB4FA860006090F = {
 			isa = PBXGroup;
 			children = (
+				1586657A1CB602D500F85DA5 /* UIImage+LSImage.h */,
+				1586657B1CB602D500F85DA5 /* UIImage+LSImage.m */,
+				15F25F3D1CB5FD7B009A016E /* LSTabBarController.h */,
+				15F25F3E1CB5FD7B009A016E /* LSTabBarController.m */,
 				150EA3501CB4FA860006090F /* 梁森微博 */,
 				150EA36D1CB4FA870006090F /* 梁森微博Tests */,
 				150EA3781CB4FA870006090F /* 梁森微博UITests */,
@@ -103,8 +110,6 @@
 			children = (
 				150EA3541CB4FA860006090F /* AppDelegate.h */,
 				150EA3551CB4FA860006090F /* AppDelegate.m */,
-				150EA3D11CB50A3B0006090F /* RootViewController.h */,
-				150EA3D21CB50A3B0006090F /* RootViewController.m */,
 				150EA3601CB4FA860006090F /* Assets.xcassets */,
 				150EA3621CB4FA860006090F /* LaunchScreen.storyboard */,
 				150EA3651CB4FA860006090F /* Info.plist */,
@@ -202,6 +207,7 @@
 		150EA3461CB4FA860006090F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LS;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = LS;
 				TargetAttributes = {
@@ -269,9 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15F25F3F1CB5FD7B009A016E /* LSTabBarController.m in Sources */,
 				150EA35F1CB4FA860006090F /* ____.xcdatamodeld in Sources */,
 				150EA3561CB4FA860006090F /* AppDelegate.m in Sources */,
-				150EA3D31CB50A3B0006090F /* RootViewController.m in Sources */,
+				1586657C1CB602D500F85DA5 /* UIImage+LSImage.m in Sources */,
 				150EA3531CB4FA860006090F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +499,7 @@
 				150EA3801CB4FA870006090F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		150EA3811CB4FA870006090F /* Build configuration list for PBXNativeTarget "梁森微博Tests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +508,7 @@
 				150EA3831CB4FA870006090F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		150EA3841CB4FA870006090F /* Build configuration list for PBXNativeTarget "梁森微博UITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +517,7 @@
 				150EA3861CB4FA870006090F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

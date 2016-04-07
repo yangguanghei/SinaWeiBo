@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "RootViewController.h"
+#import "LSTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,30 +18,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor redColor];
+    
+    LSTabBarController * tabBarVc = [[LSTabBarController alloc] init];
+    
+    
+    
+    self.window.rootViewController = tabBarVc;
+    
+    
     [self.window makeKeyAndVisible];
     
-    UITabBarController * tabBarC = [[UITabBarController alloc] init];
-    self.window.rootViewController = tabBarC;
-    
-    // 首页
-    UIViewController * homeVC = [[UIViewController alloc] init];
-    homeVC.view.backgroundColor = [UIColor redColor];
-    [tabBarC addChildViewController:homeVC];
-    // 消息
-    UIViewController * messageVC = [[UIViewController alloc] init];
-    messageVC.view.backgroundColor = [UIColor greenColor];
-    [tabBarC addChildViewController:messageVC];
-    // 发现
-    UIViewController * discoverVC = [[UIViewController alloc] init];
-    discoverVC.view.backgroundColor = [UIColor yellowColor];
-    [tabBarC addChildViewController:discoverVC];
-    // 我
-    UIViewController * mineVC = [[UIViewController alloc] init];
-    mineVC.view.backgroundColor = [UIColor blueColor];
-    [tabBarC addChildViewController:mineVC];
     
     [NSThread sleepForTimeInterval:2];
     
