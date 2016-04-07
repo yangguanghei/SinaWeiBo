@@ -8,6 +8,8 @@
 
 #import "LSTabBarController.h"
 #import "UIImage+LSImage.h"
+// 自定义tabBar
+#import "LSTabBar.h"
 @interface LSTabBarController ()
 
 @end
@@ -20,6 +22,24 @@
     // 管理子控制器
     [self setUpChildVC];
     
+    LSTabBar * lsTabBar = [[LSTabBar alloc] initWithFrame:self.tabBar.frame];
+    
+    //    self.tabBar = lsTabBar;
+    // 利用KVC对进行赋值，改变只读属性
+    // 现在的self.tabBar就成了我们自己定义的lsTabBar
+    [self setValue:lsTabBar forKey:@"tabBar"];
+    
+    // 此时还没有子视图控制器
+    NSLog(@"viewDidLod:---%@", self.tabBar.subviews);
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    
+    
+    NSLog(@"viewDidAppear:---%@", self.tabBar.subviews);
 }
 
 + (void)initialize
@@ -69,6 +89,7 @@
     VC.tabBarItem.image = image;
     VC.tabBarItem.selectedImage = selectedImage;
     VC.tabBarItem.title = title;
+    VC.tabBarItem.badgeValue = @"";
     
     [self addChildViewController:VC];
 }
