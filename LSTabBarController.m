@@ -21,64 +21,61 @@
     [self setUpChildVC];
     
 }
+
++ (void)initialize
+{
+    // appearanceWhenContainedIn：获取当前类下的所有外观
+    UITabBarItem * item = [UITabBarItem appearanceWhenContainedIn:self, nil];
+    NSMutableDictionary * dic = [NSMutableDictionary dictionary];
+//    [dic setObject:[UIColor orangeColor] forKey:NSForegroundColorAttributeName];
+    dic[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    [item setTitleTextAttributes:dic forState:UIControlStateSelected];
+}
+
 #pragma mark -------管理子控制器
 - (void)setUpChildVC
 {
     // 首页
     UIViewController *home = [[UIViewController alloc] init];
-    home.tabBarItem.title = @"首页";
-    // 图片提示的插件
-    home.tabBarItem.image = [UIImage imageNamed:@"tabbar_home"];
-//    UIImage * selectedImage = [UIImage imageNamed:@"tabbar_home_selected"];
-    // 让图片显示原来的样式
-//    selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    // 使用分类
-    home.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabbar_home_selected"];
+    [self setUPchildVC:home withImage:[UIImage imageNamed:@"tabbar_home"] withSelectedImage: [UIImage imageWithOriginalName:@"tabbar_home_selected"]withTitle:@"首页"];
     home.view.backgroundColor = [UIColor greenColor];
-    
     [self addChildViewController:home];
     
     // 消息
     UIViewController *message = [[UIViewController alloc] init];
-    message.tabBarItem.title = @"消息";
-    message.tabBarItem.image = [UIImage imageNamed:@"tabbar_message_center"];
-    message.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabbar_message_center_selected"];
+    [self setUPchildVC:message withImage:[UIImage imageNamed:@"tabbar_message_center"] withSelectedImage:[UIImage imageWithOriginalName:@"tabbar_message_center_selected"] withTitle:@"消息"];
     message.view.backgroundColor = [UIColor blueColor];
     
     [self addChildViewController:message];
     
     // 发现
     UIViewController *discover = [[UIViewController alloc] init];
-    discover.tabBarItem.title = @"发现";
-    discover.tabBarItem.image = [UIImage imageNamed:@"tabbar_discover"];
-    discover.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabbar_discover_selected"];
+    [self setUPchildVC:discover withImage:[UIImage imageNamed:@"tabbar_discover"] withSelectedImage:[UIImage imageWithOriginalName:@"tabbar_discover_selected"] withTitle:@"发现"];
     discover.view.backgroundColor = [UIColor purpleColor];
     
     [self addChildViewController:discover];
     
     // 我
     UIViewController *profile = [[UIViewController alloc] init];
-    profile.tabBarItem.title = @"我";
-    profile.tabBarItem.image = [UIImage imageNamed:@"tabbar_profile"];
-    profile.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabbar_profile_selected"];
+    [self setUPchildVC:profile withImage:[UIImage imageNamed:@"tabbar_profile"] withSelectedImage:[UIImage imageWithOriginalName:@"tabbar_profile_selected"] withTitle:@"我"];
     profile.view.backgroundColor = [UIColor lightGrayColor];
     
     [self addChildViewController:profile];
 }
 
+#pragma mark --------抽取代码，添加子控制器
+- (void)setUPchildVC:(UIViewController *)VC withImage:(UIImage *)image withSelectedImage:(UIImage *)selectedImage withTitle:(NSString *)title
+{
+    VC.tabBarItem.image = image;
+    VC.tabBarItem.selectedImage = selectedImage;
+    VC.tabBarItem.title = title;
+    
+    [self addChildViewController:VC];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
