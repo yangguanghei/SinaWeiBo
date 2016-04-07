@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  梁森微博
 //
 //  Created by pro on 16/4/6.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface RootViewController : UIViewController
 
 @end
-
