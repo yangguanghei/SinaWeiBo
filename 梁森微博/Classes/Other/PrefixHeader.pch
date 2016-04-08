@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  梁森微博
+//
+//  Created by pro on 16/4/8.
+//  Copyright © 2016年 LS. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define LSKeyWindow [UIApplication sharedApplication].keyWindow
+
+#import "UIView+Frame.h"
+#import "UIImage+LSImage.h"
+
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 调试
+
+#define NSLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define NSLog(...)
+
+#endif
+#endif /* PrefixHeader_pch */
