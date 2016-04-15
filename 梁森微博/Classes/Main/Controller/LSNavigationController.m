@@ -82,7 +82,7 @@
 }
 - (void)moreBtnClick
 {
-    
+    [self popToRootViewControllerAnimated:YES];
 }
 
 @end
