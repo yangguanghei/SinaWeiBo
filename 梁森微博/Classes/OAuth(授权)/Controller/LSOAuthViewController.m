@@ -13,10 +13,15 @@
 #import "SVProgressHUD.h"
 
 #import "AFHTTPRequestOperationManager.h"
+// 业务类
+#import "LSAccount.h"
+// 工具类
+#import "LSAccountTool.h"
 
 #define Client_id @"3460952036"
 #define Redirect_uri @"http://www.baidu.com"
 #define Client_secret @"fa2fa5bae5e91b4c6b938b2aea431eb2"
+
 
 @interface LSOAuthViewController ()<UIWebViewDelegate>
 
@@ -68,7 +73,7 @@
     NSRange range = [requestURLStr rangeOfString:@"code="];
     if (range.length) {
         NSString * code = [requestURLStr substringFromIndex:range.location + range.length];
-//        NSLog(@"code:%@", code);
+        NSLog(@"code:%@", code);
         
         // 获取Access Token
         [self getAccessTokenWithCode:code];
@@ -102,7 +107,12 @@
     [manager POST:baseURLStr parameters:parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         
         
-        NSLog(@"成功：%@", responseObject);
+//        NSLog(@"成功：%@", responseObject);
+        // 保存获取到的AccessToken
+        LSAccount * account = [LSAccount applicationWithDic:responseObject];
+        // 归档必须遵循NSCoding协议
+        [LSAccountTool saveAccount:account];
+        
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         
         NSLog(@"失败：%@", error);

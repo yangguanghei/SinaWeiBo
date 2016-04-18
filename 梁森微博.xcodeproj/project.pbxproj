@@ -37,6 +37,8 @@
 		15D336011CC487850066D03D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D335EF1CC487850066D03D /* MBProgressHUD.m */; };
 		15D336061CC489BF0066D03D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 15D336031CC489BF0066D03D /* SVProgressHUD.bundle */; };
 		15D336071CC489BF0066D03D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D336051CC489BF0066D03D /* SVProgressHUD.m */; };
+		15D3360B1CC4CE0C0066D03D /* LSAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3360A1CC4CE0C0066D03D /* LSAccount.m */; };
+		15D3360E1CC4D5C50066D03D /* LSAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3360D1CC4D5C50066D03D /* LSAccountTool.m */; };
 		15FACEF21CB74B4000DDDD76 /* LSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACEDE1CB74B4000DDDD76 /* LSTabBarController.m */; };
 		15FACEF31CB74B4000DDDD76 /* LSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACEE21CB74B4000DDDD76 /* LSTabBar.m */; };
 		15FACEF41CB74B4000DDDD76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACEE91CB74B4000DDDD76 /* AppDelegate.m */; };
@@ -137,6 +139,10 @@
 		15D336031CC489BF0066D03D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		15D336041CC489BF0066D03D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		15D336051CC489BF0066D03D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		15D336091CC4CE0C0066D03D /* LSAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAccount.h; sourceTree = "<group>"; };
+		15D3360A1CC4CE0C0066D03D /* LSAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAccount.m; sourceTree = "<group>"; };
+		15D3360C1CC4D5C50066D03D /* LSAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAccountTool.h; sourceTree = "<group>"; };
+		15D3360D1CC4D5C50066D03D /* LSAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAccountTool.m; sourceTree = "<group>"; };
 		15FACEDD1CB74B4000DDDD76 /* LSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTabBarController.h; sourceTree = "<group>"; };
 		15FACEDE1CB74B4000DDDD76 /* LSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTabBarController.m; sourceTree = "<group>"; };
 		15FACEE11CB74B4000DDDD76 /* LSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTabBar.h; sourceTree = "<group>"; };
@@ -315,6 +321,8 @@
 		15D335BF1CC484050066D03D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				15D336091CC4CE0C0066D03D /* LSAccount.h */,
+				15D3360A1CC4CE0C0066D03D /* LSAccount.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -413,6 +421,15 @@
 				15D336051CC489BF0066D03D /* SVProgressHUD.m */,
 			);
 			path = SVProgress;
+			sourceTree = "<group>";
+		};
+		15D336081CC4CDDF0066D03D /* Tool(业务类) */ = {
+			isa = PBXGroup;
+			children = (
+				15D3360C1CC4D5C50066D03D /* LSAccountTool.h */,
+				15D3360D1CC4D5C50066D03D /* LSAccountTool.m */,
+			);
+			path = "Tool(业务类)";
 			sourceTree = "<group>";
 		};
 		15FACED21CB74B4000DDDD76 /* Classes */ = {
@@ -582,6 +599,7 @@
 		15FACEE71CB74B4000DDDD76 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				15D336081CC4CDDF0066D03D /* Tool(业务类) */,
 				15D335C41CC486EB0066D03D /* Tool */,
 				15FACEEA1CB74B4000DDDD76 /* category */,
 				15FACEE81CB74B4000DDDD76 /* AppDelegate.h */,
@@ -707,6 +725,7 @@
 				TargetAttributes = {
 					150EA34D1CB4FA860006090F = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = XJL3Q5Y9Q6;
 					};
 					150EA3691CB4FA870006090F = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -779,6 +798,7 @@
 				15FACF231CB77F1200DDDD76 /* LSTitleBtn.m in Sources */,
 				15D335F51CC487850066D03D /* AFURLConnectionOperation.m in Sources */,
 				15FACEF41CB74B4000DDDD76 /* AppDelegate.m in Sources */,
+				15D3360B1CC4CE0C0066D03D /* LSAccount.m in Sources */,
 				15FACF1A1CB7627100DDDD76 /* LSSearchBar.m in Sources */,
 				15FACF0B1CB75ACD00DDDD76 /* LSHomeViewController.m in Sources */,
 				15D335FB1CC487850066D03D /* UIAlertView+AFNetworking.m in Sources */,
@@ -793,6 +813,7 @@
 				15B99B2E1CC0E8640062919F /* LSNewFeatureCell.m in Sources */,
 				15FACF201CB77CBE00DDDD76 /* UIBarButtonItem+Item.m in Sources */,
 				15D335FF1CC487850066D03D /* UIRefreshControl+AFNetworking.m in Sources */,
+				15D3360E1CC4D5C50066D03D /* LSAccountTool.m in Sources */,
 				15D335F71CC487850066D03D /* AFURLResponseSerialization.m in Sources */,
 				15D335F11CC487850066D03D /* AFHTTPRequestOperationManager.m in Sources */,
 				15D335F01CC487850066D03D /* AFHTTPRequestOperation.m in Sources */,
@@ -943,12 +964,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/梁森微博/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "梁森微博/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lsWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -957,12 +981,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/梁森微博/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "梁森微博/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lsWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
