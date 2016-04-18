@@ -10,6 +10,7 @@
 #import "LSAccount.h"
 static LSAccount * _account;
 
+#import "LSAccount.h"
 #define LSFilePath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"account.data"] // 存储模型的文件路径
 @implementation LSAccountTool
 
