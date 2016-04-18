@@ -18,6 +18,8 @@
 // 工具类
 #import "LSAccountTool.h"
 
+#import "LSRootTool.h"
+
 #define Client_id @"3460952036"
 #define Redirect_uri @"http://www.baidu.com"
 #define Client_secret @"fa2fa5bae5e91b4c6b938b2aea431eb2"
@@ -112,6 +114,9 @@
         LSAccount * account = [LSAccount applicationWithDic:responseObject];
         // 归档必须遵循NSCoding协议
         [LSAccountTool saveAccount:account];
+        
+        // 将accessToken保存之后选取根视图控制器
+        [LSRootTool chooseRootViewController:LSKeyWindow];
         
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         

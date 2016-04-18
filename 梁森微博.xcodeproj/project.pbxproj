@@ -39,6 +39,7 @@
 		15D336071CC489BF0066D03D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D336051CC489BF0066D03D /* SVProgressHUD.m */; };
 		15D3360B1CC4CE0C0066D03D /* LSAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3360A1CC4CE0C0066D03D /* LSAccount.m */; };
 		15D3360E1CC4D5C50066D03D /* LSAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D3360D1CC4D5C50066D03D /* LSAccountTool.m */; };
+		15D336121CC4DDFD0066D03D /* LSRootTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D336111CC4DDFD0066D03D /* LSRootTool.m */; };
 		15FACEF21CB74B4000DDDD76 /* LSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACEDE1CB74B4000DDDD76 /* LSTabBarController.m */; };
 		15FACEF31CB74B4000DDDD76 /* LSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACEE21CB74B4000DDDD76 /* LSTabBar.m */; };
 		15FACEF41CB74B4000DDDD76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACEE91CB74B4000DDDD76 /* AppDelegate.m */; };
@@ -143,6 +144,8 @@
 		15D3360A1CC4CE0C0066D03D /* LSAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAccount.m; sourceTree = "<group>"; };
 		15D3360C1CC4D5C50066D03D /* LSAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAccountTool.h; sourceTree = "<group>"; };
 		15D3360D1CC4D5C50066D03D /* LSAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAccountTool.m; sourceTree = "<group>"; };
+		15D336101CC4DDFD0066D03D /* LSRootTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSRootTool.h; sourceTree = "<group>"; };
+		15D336111CC4DDFD0066D03D /* LSRootTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSRootTool.m; sourceTree = "<group>"; };
 		15FACEDD1CB74B4000DDDD76 /* LSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTabBarController.h; sourceTree = "<group>"; };
 		15FACEDE1CB74B4000DDDD76 /* LSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTabBarController.m; sourceTree = "<group>"; };
 		15FACEE11CB74B4000DDDD76 /* LSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTabBar.h; sourceTree = "<group>"; };
@@ -426,10 +429,20 @@
 		15D336081CC4CDDF0066D03D /* Tool(业务类) */ = {
 			isa = PBXGroup;
 			children = (
+				15D3360F1CC4DDE80066D03D /* Root */,
 				15D3360C1CC4D5C50066D03D /* LSAccountTool.h */,
 				15D3360D1CC4D5C50066D03D /* LSAccountTool.m */,
 			);
 			path = "Tool(业务类)";
+			sourceTree = "<group>";
+		};
+		15D3360F1CC4DDE80066D03D /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				15D336101CC4DDFD0066D03D /* LSRootTool.h */,
+				15D336111CC4DDFD0066D03D /* LSRootTool.m */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		15FACED21CB74B4000DDDD76 /* Classes */ = {
@@ -805,6 +818,7 @@
 				15D336001CC487850066D03D /* UIWebView+AFNetworking.m in Sources */,
 				15D335F81CC487850066D03D /* AFURLSessionManager.m in Sources */,
 				15D335FD1CC487850066D03D /* UIImageView+AFNetworking.m in Sources */,
+				15D336121CC4DDFD0066D03D /* LSRootTool.m in Sources */,
 				15B99B281CC0E34E0062919F /* LSRootCollectionViewController.m in Sources */,
 				15FACF2A1CB78B6000DDDD76 /* LSPopMenu.m in Sources */,
 				15D336071CC489BF0066D03D /* SVProgressHUD.m in Sources */,
