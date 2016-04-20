@@ -45,7 +45,6 @@
 		15FACEF41CB74B4000DDDD76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACEE91CB74B4000DDDD76 /* AppDelegate.m */; };
 		15FACEF51CB74B4000DDDD76 /* UIImage+LSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACEEC1CB74B4000DDDD76 /* UIImage+LSImage.m */; };
 		15FACEF61CB74B4000DDDD76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACEED1CB74B4000DDDD76 /* main.m */; };
-		15FACF0B1CB75ACD00DDDD76 /* LSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACF0A1CB75ACD00DDDD76 /* LSHomeViewController.m */; };
 		15FACF0E1CB75ADF00DDDD76 /* LSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACF0D1CB75ADF00DDDD76 /* LSDiscoverViewController.m */; };
 		15FACF111CB75AFA00DDDD76 /* LSMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACF101CB75AFA00DDDD76 /* LSMessageViewController.m */; };
 		15FACF141CB75B4300DDDD76 /* LSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACF131CB75B4300DDDD76 /* LSProfileViewController.m */; };
@@ -57,6 +56,7 @@
 		15FACF271CB785DC00DDDD76 /* LSCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACF261CB785DC00DDDD76 /* LSCoverView.m */; };
 		15FACF2A1CB78B6000DDDD76 /* LSPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACF291CB78B6000DDDD76 /* LSPopMenu.m */; };
 		15FACF301CB7927E00DDDD76 /* LSMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACF2F1CB7927E00DDDD76 /* LSMenuController.m */; };
+		C1B29C361CC72AE20019752D /* LSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B29C351CC72AE20019752D /* LSHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,8 +155,6 @@
 		15FACEEB1CB74B4000DDDD76 /* UIImage+LSImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LSImage.h"; sourceTree = "<group>"; };
 		15FACEEC1CB74B4000DDDD76 /* UIImage+LSImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LSImage.m"; sourceTree = "<group>"; };
 		15FACEED1CB74B4000DDDD76 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		15FACF091CB75ACD00DDDD76 /* LSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSHomeViewController.h; path = ../../../../../LSHomeViewController.h; sourceTree = "<group>"; };
-		15FACF0A1CB75ACD00DDDD76 /* LSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSHomeViewController.m; path = ../../../../../LSHomeViewController.m; sourceTree = "<group>"; };
 		15FACF0C1CB75ADF00DDDD76 /* LSDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSDiscoverViewController.h; sourceTree = "<group>"; };
 		15FACF0D1CB75ADF00DDDD76 /* LSDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSDiscoverViewController.m; sourceTree = "<group>"; };
 		15FACF0F1CB75AFA00DDDD76 /* LSMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSMessageViewController.h; sourceTree = "<group>"; };
@@ -180,6 +178,8 @@
 		15FACF291CB78B6000DDDD76 /* LSPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPopMenu.m; sourceTree = "<group>"; };
 		15FACF2E1CB7927E00DDDD76 /* LSMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSMenuController.h; sourceTree = "<group>"; };
 		15FACF2F1CB7927E00DDDD76 /* LSMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSMenuController.m; sourceTree = "<group>"; };
+		C1B29C341CC72AE20019752D /* LSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSHomeViewController.h; sourceTree = "<group>"; };
+		C1B29C351CC72AE20019752D /* LSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,8 +506,8 @@
 		15FACED81CB74B4000DDDD76 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				15FACF091CB75ACD00DDDD76 /* LSHomeViewController.h */,
-				15FACF0A1CB75ACD00DDDD76 /* LSHomeViewController.m */,
+				C1B29C341CC72AE20019752D /* LSHomeViewController.h */,
+				C1B29C351CC72AE20019752D /* LSHomeViewController.m */,
 				15B99B191CC094750062919F /* LSOneViewController.h */,
 				15B99B1A1CC094750062919F /* LSOneViewController.m */,
 				15B99B1C1CC098190062919F /* LSTwoViewController.h */,
@@ -808,12 +808,12 @@
 				15D335FC1CC487850066D03D /* UIButton+AFNetworking.m in Sources */,
 				15FACF111CB75AFA00DDDD76 /* LSMessageViewController.m in Sources */,
 				15FACF271CB785DC00DDDD76 /* LSCoverView.m in Sources */,
+				C1B29C361CC72AE20019752D /* LSHomeViewController.m in Sources */,
 				15FACF231CB77F1200DDDD76 /* LSTitleBtn.m in Sources */,
 				15D335F51CC487850066D03D /* AFURLConnectionOperation.m in Sources */,
 				15FACEF41CB74B4000DDDD76 /* AppDelegate.m in Sources */,
 				15D3360B1CC4CE0C0066D03D /* LSAccount.m in Sources */,
 				15FACF1A1CB7627100DDDD76 /* LSSearchBar.m in Sources */,
-				15FACF0B1CB75ACD00DDDD76 /* LSHomeViewController.m in Sources */,
 				15D335FB1CC487850066D03D /* UIAlertView+AFNetworking.m in Sources */,
 				15D336001CC487850066D03D /* UIWebView+AFNetworking.m in Sources */,
 				15D335F81CC487850066D03D /* AFURLSessionManager.m in Sources */,
