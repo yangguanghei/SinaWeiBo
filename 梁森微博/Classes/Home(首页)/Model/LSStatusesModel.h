@@ -27,6 +27,10 @@
 */
 @property (nonatomic, copy) NSString * created_at;
 /**
+ *  字符串型的微博ID
+ */
+@property (nonatomic, copy) NSString *idstr;
+/**
  *  微博信息内容
  */
 @property (nonatomic, copy) NSString * text;
@@ -46,8 +50,9 @@
  *  表态数
  */
 @property (nonatomic, assign) int * attitudes_count;
-
-
+/**
+ *  配图数组
+ */
 @property (nonatomic, strong) NSArray * pic_ids;
 
 
