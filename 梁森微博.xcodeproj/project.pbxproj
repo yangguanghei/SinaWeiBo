@@ -93,6 +93,7 @@
 		C13F7C0B1CC754D8003C47C8 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C13F7BFA1CC754D8003C47C8 /* UIView+WebCacheOperation.m */; };
 		C1B29C361CC72AE20019752D /* LSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B29C351CC72AE20019752D /* LSHomeViewController.m */; };
 		C1B29C391CC732710019752D /* LSStatusesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B29C381CC732710019752D /* LSStatusesModel.m */; };
+		C1EE42AF1CCF181400623E3C /* LSStatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EE42AE1CCF181400623E3C /* LSStatusTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,6 +291,8 @@
 		C1B29C351CC72AE20019752D /* LSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSHomeViewController.m; sourceTree = "<group>"; };
 		C1B29C371CC732710019752D /* LSStatusesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSStatusesModel.h; sourceTree = "<group>"; };
 		C1B29C381CC732710019752D /* LSStatusesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSStatusesModel.m; sourceTree = "<group>"; };
+		C1EE42AD1CCF181400623E3C /* LSStatusTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSStatusTool.h; sourceTree = "<group>"; };
+		C1EE42AE1CCF181400623E3C /* LSStatusTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSStatusTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -543,6 +546,7 @@
 		15D336081CC4CDDF0066D03D /* Tool(业务类) */ = {
 			isa = PBXGroup;
 			children = (
+				C1EE42AC1CCF17F800623E3C /* 数据层 */,
 				15D3360F1CC4DDE80066D03D /* Root */,
 				15D3360C1CC4D5C50066D03D /* LSAccountTool.h */,
 				15D3360D1CC4D5C50066D03D /* LSAccountTool.m */,
@@ -886,6 +890,15 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		C1EE42AC1CCF17F800623E3C /* 数据层 */ = {
+			isa = PBXGroup;
+			children = (
+				C1EE42AD1CCF181400623E3C /* LSStatusTool.h */,
+				C1EE42AE1CCF181400623E3C /* LSStatusTool.m */,
+			);
+			path = "数据层";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1082,6 +1095,7 @@
 				15D335F31CC487850066D03D /* AFNetworkReachabilityManager.m in Sources */,
 				15FACF141CB75B4300DDDD76 /* LSProfileViewController.m in Sources */,
 				C1212E6A1CCDC4BF00F76D4E /* MJRefreshBaseView.m in Sources */,
+				C1EE42AF1CCF181400623E3C /* LSStatusTool.m in Sources */,
 				C1212E6F1CCDC4BF00F76D4E /* UIScrollView+MJRefresh.m in Sources */,
 				15D335C31CC4842E0066D03D /* LSOAuthViewController.m in Sources */,
 				15D335F91CC487850066D03D /* AFNetworkActivityIndicatorManager.m in Sources */,
