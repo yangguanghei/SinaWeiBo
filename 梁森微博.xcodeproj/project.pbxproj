@@ -93,6 +93,7 @@
 		C13F7C0B1CC754D8003C47C8 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C13F7BFA1CC754D8003C47C8 /* UIView+WebCacheOperation.m */; };
 		C1B29C361CC72AE20019752D /* LSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B29C351CC72AE20019752D /* LSHomeViewController.m */; };
 		C1B29C391CC732710019752D /* LSStatusesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B29C381CC732710019752D /* LSStatusesModel.m */; };
+		C1CA22CA1CCF6252009CBAC5 /* LSParamers.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CA22C91CCF6252009CBAC5 /* LSParamers.m */; };
 		C1EE42AF1CCF181400623E3C /* LSStatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EE42AE1CCF181400623E3C /* LSStatusTool.m */; };
 /* End PBXBuildFile section */
 
@@ -291,6 +292,8 @@
 		C1B29C351CC72AE20019752D /* LSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSHomeViewController.m; sourceTree = "<group>"; };
 		C1B29C371CC732710019752D /* LSStatusesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSStatusesModel.h; sourceTree = "<group>"; };
 		C1B29C381CC732710019752D /* LSStatusesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSStatusesModel.m; sourceTree = "<group>"; };
+		C1CA22C81CCF6252009CBAC5 /* LSParamers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSParamers.h; sourceTree = "<group>"; };
+		C1CA22C91CCF6252009CBAC5 /* LSParamers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSParamers.m; sourceTree = "<group>"; };
 		C1EE42AD1CCF181400623E3C /* LSStatusTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSStatusTool.h; sourceTree = "<group>"; };
 		C1EE42AE1CCF181400623E3C /* LSStatusTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSStatusTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -437,6 +440,7 @@
 		15D335BF1CC484050066D03D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C1CA22C71CCF623C009CBAC5 /* 参数模型 */,
 				15D336091CC4CE0C0066D03D /* LSAccount.h */,
 				15D3360A1CC4CE0C0066D03D /* LSAccount.m */,
 			);
@@ -890,6 +894,15 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		C1CA22C71CCF623C009CBAC5 /* 参数模型 */ = {
+			isa = PBXGroup;
+			children = (
+				C1CA22C81CCF6252009CBAC5 /* LSParamers.h */,
+				C1CA22C91CCF6252009CBAC5 /* LSParamers.m */,
+			);
+			path = "参数模型";
+			sourceTree = "<group>";
+		};
 		C1EE42AC1CCF17F800623E3C /* 数据层 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1051,6 +1064,7 @@
 				15FACF231CB77F1200DDDD76 /* LSTitleBtn.m in Sources */,
 				15D335F51CC487850066D03D /* AFURLConnectionOperation.m in Sources */,
 				C13F7C061CC754D8003C47C8 /* UIImage+GIF.m in Sources */,
+				C1CA22CA1CCF6252009CBAC5 /* LSParamers.m in Sources */,
 				15FACEF41CB74B4000DDDD76 /* AppDelegate.m in Sources */,
 				15D3360B1CC4CE0C0066D03D /* LSAccount.m in Sources */,
 				C13F7C041CC754D8003C47C8 /* SDWebImagePrefetcher.m in Sources */,

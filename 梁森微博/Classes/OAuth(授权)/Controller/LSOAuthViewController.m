@@ -20,11 +20,8 @@
 
 #import "LSRootTool.h"
 
-#define Client_id @"3460952036"
-#define Redirect_uri @"http://www.baidu.com"
-#define Client_secret @"fa2fa5bae5e91b4c6b938b2aea431eb2"
-
-
+// 网络请求工具类
+#import "LSHttpTool.h"
 @interface LSOAuthViewController ()<UIWebViewDelegate>
 
 @end
@@ -87,40 +84,11 @@
 
 - (void)getAccessTokenWithCode:(NSString *)code
 {
-    /*
-     client_id	true	string	申请应用时分配的AppKey。
-     client_secret	true	string	申请应用时分配的AppSecret。
-     grant_type	true	string	请求的类型，填写authorization_code
-     
-     grant_type为authorization_code时
-     必选	类型及范围	说明
-     code	true	string	调用authorize获得的code值。
-     redirect_uri	true	string	回调地址，需需与注册应用里的回调地址一致。
-
-     */
-    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
-    NSString * baseURLStr = @"https://api.weibo.com/oauth2/access_token";
-    NSMutableDictionary * parameters = [NSMutableDictionary dictionary];
-    parameters [@"client_id"] = Client_id;
-    parameters [@"client_secret"] = Client_secret;
-    parameters [@"grant_type"] = @"authorization_code";
-    parameters [@"code"] = code;
-    parameters [@"redirect_uri"] = Redirect_uri;
-    [manager POST:baseURLStr parameters:parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        
-        
-//        NSLog(@"成功：%@", responseObject);
-        // 保存获取到的AccessToken
-        LSAccount * account = [LSAccount applicationWithDic:responseObject];
-        // 归档必须遵循NSCoding协议
-        [LSAccountTool saveAccount:account];
-        
-        // 将accessToken保存之后选取根视图控制器
+      
+    [LSAccountTool accountWithCode:code success:^{
         [LSRootTool chooseRootViewController:LSKeyWindow];
+    } failure:^(NSError *error) {
         
-    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        
-        NSLog(@"失败：%@", error);
     }];
 }
 
