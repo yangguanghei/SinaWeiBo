@@ -149,6 +149,9 @@
     } else
     {
         NSLog(@"当前下标和上一次被选中的下标相同");
+        if (tabIndex == 0) {
+            [_homeVC refresh];
+        }
 //        NSLog(@"---%lu", self.selectedIndex);
 //        NSLog(@"可以进行刷新操作。。。");
     }

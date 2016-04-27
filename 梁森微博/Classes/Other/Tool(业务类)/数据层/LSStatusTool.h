@@ -13,5 +13,14 @@
 + (void)getNewDataWithStr:(NSString *)URLString parameters:(id)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure;
 
 + (void)getMoreDataWithStr:(NSString *)URLString parameters:(id)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure;
+/**
+ *  获取用户信息
+ *
+ *  @param URLString  <#URLString description#>
+ *  @param parameters <#parameters description#>
+ *  @param success    <#success description#>
+ *  @param failure    <#failure description#>
+ */
++ (void)getUserDataWithStr:(NSString *)URLString parameters:(id)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure;
 
 @end

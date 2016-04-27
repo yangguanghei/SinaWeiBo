@@ -56,4 +56,25 @@
     
 }
 
++ (void)getUserDataWithStr:(NSString *)URLString parameters:(id)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure
+{
+    [LSHttpTool GET:URLString parameters:parameters success:^(id responseObject) {
+        // 获取到微博数据 转换成模型
+        // 获取微博字典数组
+        NSArray *dictArr = responseObject[@"statuses"];
+        // 把字典数组转换成模型数组
+        NSArray *statuses = (NSMutableArray *)[LSStatusesModel objectArrayWithKeyValuesArray:dictArr];
+        if (success) {
+            success(statuses);
+        }
+    } failure:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+    
+    
+}
+
 @end

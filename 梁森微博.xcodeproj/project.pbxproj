@@ -221,6 +221,7 @@
 		C106022D1CD061A0008A330B /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
 		C106022E1CD061A0008A330B /* 爸比我要喝奶奶.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "爸比我要喝奶奶.mp3"; sourceTree = "<group>"; };
 		C10602331CD06339008A330B /* 梁森微博.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "梁森微博.entitlements"; sourceTree = "<group>"; };
+		C1109F321CD09D4F00A9BA83 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		C1212E551CCDC24B00F76D4E /* LSHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSHttpTool.h; sourceTree = "<group>"; };
 		C1212E561CCDC24B00F76D4E /* LSHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSHttpTool.m; sourceTree = "<group>"; };
 		C1212E591CCDC4BF00F76D4E /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
@@ -754,6 +755,7 @@
 				15FACEE91CB74B4000DDDD76 /* AppDelegate.m */,
 				15FACEED1CB74B4000DDDD76 /* main.m */,
 				15FACF241CB782F300DDDD76 /* PrefixHeader.pch */,
+				C1109F321CD09D4F00A9BA83 /* Header.h */,
 			);
 			name = Other;
 			path = Classes/Other;
