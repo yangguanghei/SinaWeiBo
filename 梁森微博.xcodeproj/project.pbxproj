@@ -56,6 +56,8 @@
 		15FACF271CB785DC00DDDD76 /* LSCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACF261CB785DC00DDDD76 /* LSCoverView.m */; };
 		15FACF2A1CB78B6000DDDD76 /* LSPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACF291CB78B6000DDDD76 /* LSPopMenu.m */; };
 		15FACF301CB7927E00DDDD76 /* LSMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FACF2F1CB7927E00DDDD76 /* LSMenuController.m */; };
+		C106022F1CD061A0008A330B /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C106022D1CD061A0008A330B /* silence.mp3 */; };
+		C10602301CD061A0008A330B /* 爸比我要喝奶奶.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C106022E1CD061A0008A330B /* 爸比我要喝奶奶.mp3 */; };
 		C1212E571CCDC24B00F76D4E /* LSHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C1212E561CCDC24B00F76D4E /* LSHttpTool.m */; };
 		C1212E691CCDC4BF00F76D4E /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C1212E591CCDC4BF00F76D4E /* MJRefresh.bundle */; };
 		C1212E6A1CCDC4BF00F76D4E /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1212E5C1CCDC4BF00F76D4E /* MJRefreshBaseView.m */; };
@@ -216,6 +218,9 @@
 		15FACF291CB78B6000DDDD76 /* LSPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPopMenu.m; sourceTree = "<group>"; };
 		15FACF2E1CB7927E00DDDD76 /* LSMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSMenuController.h; sourceTree = "<group>"; };
 		15FACF2F1CB7927E00DDDD76 /* LSMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSMenuController.m; sourceTree = "<group>"; };
+		C106022D1CD061A0008A330B /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
+		C106022E1CD061A0008A330B /* 爸比我要喝奶奶.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "爸比我要喝奶奶.mp3"; sourceTree = "<group>"; };
+		C10602331CD06339008A330B /* 梁森微博.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "梁森微博.entitlements"; sourceTree = "<group>"; };
 		C1212E551CCDC24B00F76D4E /* LSHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSHttpTool.h; sourceTree = "<group>"; };
 		C1212E561CCDC24B00F76D4E /* LSHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSHttpTool.m; sourceTree = "<group>"; };
 		C1212E591CCDC4BF00F76D4E /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
@@ -346,6 +351,7 @@
 		150EA3501CB4FA860006090F /* 梁森微博 */ = {
 			isa = PBXGroup;
 			children = (
+				C10602331CD06339008A330B /* 梁森微博.entitlements */,
 				15FACEE71CB74B4000DDDD76 /* Other */,
 				15FACEDB1CB74B4000DDDD76 /* Main */,
 				15FACED21CB74B4000DDDD76 /* Classes */,
@@ -740,6 +746,7 @@
 		15FACEE71CB74B4000DDDD76 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				C106022B1CD06196008A330B /* Resource(资源) */,
 				15D336081CC4CDDF0066D03D /* Tool(业务类) */,
 				15D335C41CC486EB0066D03D /* Tool */,
 				15FACEEA1CB74B4000DDDD76 /* category */,
@@ -796,6 +803,23 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C106022B1CD06196008A330B /* Resource(资源) */ = {
+			isa = PBXGroup;
+			children = (
+				C106022C1CD061A0008A330B /* Mp3 */,
+			);
+			path = "Resource(资源)";
+			sourceTree = "<group>";
+		};
+		C106022C1CD061A0008A330B /* Mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				C106022D1CD061A0008A330B /* silence.mp3 */,
+				C106022E1CD061A0008A330B /* 爸比我要喝奶奶.mp3 */,
+			);
+			path = Mp3;
 			sourceTree = "<group>";
 		};
 		C1212E541CCDC22D00F76D4E /* NetWorkTool */ = {
@@ -981,6 +1005,14 @@
 					150EA34D1CB4FA860006090F = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = XJL3Q5Y9Q6;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+						};
 					};
 					150EA3691CB4FA870006090F = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -1017,9 +1049,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C106022F1CD061A0008A330B /* silence.mp3 in Resources */,
 				150EA3641CB4FA860006090F /* LaunchScreen.storyboard in Resources */,
 				15D336061CC489BF0066D03D /* SVProgressHUD.bundle in Resources */,
 				C1212E691CCDC4BF00F76D4E /* MJRefresh.bundle in Resources */,
+				C10602301CD061A0008A330B /* 爸比我要喝奶奶.mp3 in Resources */,
 				150EA3611CB4FA860006090F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1262,7 +1296,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/梁森微博/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "梁森微博/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lsWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1279,7 +1313,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/梁森微博/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "梁森微博/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lsWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
