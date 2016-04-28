@@ -16,4 +16,11 @@
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 
+#define CZStatusCellMargin 10
+#define CZNameFont [UIFont systemFontOfSize:13]
+#define CZTimeFont [UIFont systemFontOfSize:12]
+#define CZSourceFont CZTimeFont
+#define CZTextFont [UIFont systemFontOfSize:15]
+#define CZScreenW [UIScreen mainScreen].bounds.size.width
+
 #endif /* Header_h */

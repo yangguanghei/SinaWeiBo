@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class LSStatusFrame;
 @interface LSTollView : UIView
+/**
+ *  视图模型属性
+ */
+@property (nonatomic, strong) LSStatusFrame * statusF;
 
 @end

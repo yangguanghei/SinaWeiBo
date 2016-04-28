@@ -8,6 +8,8 @@
 
 #import "LSRetransmissionView.h"
 
+#import "LSStatusesModel.h"
+#import "LSStatusFrame.h"
 @interface LSRetransmissionView()
 // 昵称
 @property (nonatomic, weak) UILabel *nameView;
@@ -24,6 +26,8 @@
     if (self = [super initWithFrame:frame]) {
         // 添加子控件
         [self setUpChildView];
+        self.userInteractionEnabled = YES;
+        self.image = [UIImage imageWithStretchableName:@"timeline_retweet_background"];
     }
     
     return self;
@@ -33,14 +37,29 @@
 {
     // 昵称
     UILabel *nameView = [[UILabel alloc] init];
+    nameView.font = CZNameFont;
     [self addSubview:nameView];
     _nameView = nameView;
     
     
     // 正文
     UILabel *textView = [[UILabel alloc] init];
+    textView.font = CZTextFont;
+    textView.numberOfLines = 0;
     [self addSubview:textView];
     _textView = textView;
+}
+- (void)setStatusF:(LSStatusFrame *)statusF
+{
+    _statusF = statusF;
+    LSStatusesModel *status = statusF.status;
+    // 昵称
+    _nameView.frame = statusF.retweetNameFrame;
+    _nameView.text = status.retweeted_status.user.name;
+    
+    // 正文
+    _textView.frame = statusF.retweetTextFrame;
+    _textView.text = status.retweeted_status.text;
 }
 
 @end

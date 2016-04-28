@@ -11,6 +11,14 @@
 @interface LSStatusTool : NSObject
 
 + (void)getNewDataWithStr:(NSString *)URLString parameters:(id)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure;
+/**
+ *  获取新的微博数据
+ *
+ *  @param sinceId <#sinceId description#>
+ *  @param success <#success description#>
+ *  @param failure <#failure description#>
+ */
++ (void)newStatusWithSinceId:(NSString *)sinceId success:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure;
 
 + (void)getMoreDataWithStr:(NSString *)URLString parameters:(id)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure;
 /**

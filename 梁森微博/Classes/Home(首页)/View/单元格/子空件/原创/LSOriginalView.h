@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LSStatusFrame;
+@interface LSOriginalView : UIImageView
 
-@interface LSOriginalView : UIView
+@property (nonatomic, strong) LSStatusFrame * status;
 
 @end

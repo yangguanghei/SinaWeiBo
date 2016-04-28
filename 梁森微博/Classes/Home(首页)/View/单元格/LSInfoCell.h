@@ -9,9 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @class LSStatusesModel;
+@class LSStatusFrame;
 @interface LSInfoCell : UITableViewCell
-//
-@property (nonatomic, strong) LSStatusesModel *status;
+/**
+ *  视图模型属性
+ */
+@property (nonatomic, strong) LSStatusFrame *status;
+
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
+
 @end

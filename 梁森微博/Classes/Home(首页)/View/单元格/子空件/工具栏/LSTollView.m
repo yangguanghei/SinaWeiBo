@@ -19,6 +19,7 @@
     if (self = [super initWithFrame:frame]) {
         // 添加子控件
         [self setUpChildView];
+        self.backgroundColor = [UIColor redColor];
     }
     
     return self;
@@ -27,6 +28,11 @@
 - (void)setUpChildView
 {
     
+}
+
+- (void)setStatusF:(LSStatusFrame *)statusF
+{
+    _statusF = statusF;
 }
 
 @end

@@ -11,11 +11,47 @@
 #import "LSHttpTool.h"
 
 #import "LSStatusesModel.h"
+// 数据模型
+#import "LSStatusParam.h"
+
+#import "LSAccount.h"
+#import "LSAccountTool.h"
 @implementation LSStatusTool
 
++ (void)newStatusWithSinceId:(NSString *)sinceId success:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure
+{
+    
+    NSString * baseStr = @"https://api.weibo.com/2/statuses/home_timeline.json";
+    LSStatusParam * param = [[LSStatusParam alloc] init];
+    LSAccount * account = [LSAccountTool account];
+    param.access_token = account.access_token;
+    
+    if (sinceId) {
+        param.since_id = sinceId;
+    }
+    // 模型转字典
+    [LSHttpTool GET:baseStr parameters:param.keyValues success:^(id responseObject) { // block是一个参数
+        
+        NSArray * statusesArr = responseObject[@"statuses"];
+        // 将字典数组直接转换成模型数据  李明杰写的第三方
+        NSArray * modelArr = [LSStatusesModel objectArrayWithKeyValuesArray:statusesArr];
+        if (success) {
+            // block传递参数
+            success(modelArr);
+        }
+        
+        // 刷新表格
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+        
+    }];
+}
 + (void)getNewDataWithStr:(NSString *)URLString parameters:(id)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
     [LSHttpTool GET:URLString parameters:parameters success:^(id responseObject) { // block是一个参数
+        
         
         NSArray * statusesArr = responseObject[@"statuses"];
         // 将字典数组直接转换成模型数据  李明杰写的第三方

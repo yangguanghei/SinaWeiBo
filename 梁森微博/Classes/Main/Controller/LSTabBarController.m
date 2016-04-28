@@ -61,7 +61,7 @@
 // 每隔三秒就刷新一次，刷新tabBar上的未读数
 - (void)requestUnread
 {
-    NSLog(@"定时刷新。。。");
+//    NSLog(@"定时刷新。。。");
     _homeVC.tabBarItem.badgeValue = @"1";
     // 未读数显示在应用图标上,前提：注册通知
     [UIApplication sharedApplication].applicationIconBadgeNumber = 3;
@@ -92,7 +92,7 @@
     LSHomeViewController *home = [[LSHomeViewController alloc] init];
     [self setUPchildVC:home withImage:[UIImage imageNamed:@"tabbar_home"] withSelectedImage: [UIImage imageWithOriginalName:@"tabbar_home_selected"]withTitle:@"首页"];
 //    [self setUPchildVC:home withImage:[UIImage imageNamed:@""] withSelectedImage: [UIImage imageWithOriginalName:@""]withTitle:@"首页"];
-    home.view.backgroundColor = [UIColor greenColor];
+    home.view.backgroundColor = [UIColor lightGrayColor];
     _homeVC = home;
     
     // 消息

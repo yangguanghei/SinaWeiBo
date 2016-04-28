@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LSRetransmissionView : UIView
+@class LSStatusFrame;
+@interface LSRetransmissionView : UIImageView
+/**
+ *  视图模型属性
+ */
+@property (nonatomic, strong) LSStatusFrame * statusF;
 
 @end

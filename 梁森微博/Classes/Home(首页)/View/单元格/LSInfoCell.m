@@ -11,7 +11,8 @@
 #import "LSOriginalView.h"
 #import "LSRetransmissionView.h"
 #import "LSTollView.h"
-
+// 视图模型
+#import "LSStatusFrame.h"
 @interface LSInfoCell()
 
 @property (nonatomic, strong) LSOriginalView * origainal;
@@ -28,6 +29,8 @@
         
         // 添加子控件
         [self setUpChildView];
+        // 清空单元格的背景色
+        self.backgroundColor = [UIColor clearColor];
     }
     
     return self;
@@ -53,7 +56,7 @@
     static NSString * cellID = @"cellID";
     id cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+        cell = [[self alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
     
     return cell;
@@ -66,9 +69,22 @@
  解决:MVVM思想
  
  */
-- (void)setStatus:(LSStatusesModel *)status
+// 在视图控制中将视图模型传递过来
+
+- (void)setStatus:(LSStatusFrame *)status
 {
     _status = status;
+    // 设置原创微博frame
+    _origainal.frame = status.originalViewFrame;
+    // 将视图模型再传递给单元格的各个子视图
+    _origainal.status = status;
+    
+    // 设置原创微博frame
+    _retransmission.frame = status.retweetViewFrame;
+    _retransmission.statusF = status;
+    
+    // 设置工具条frame
+    _toll.frame = status.toolBarFrame;
 }
 
 - (void)awakeFromNib {
