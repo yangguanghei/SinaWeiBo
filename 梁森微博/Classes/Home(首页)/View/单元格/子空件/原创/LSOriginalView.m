@@ -81,6 +81,7 @@
     // 来源
     UILabel *sourceView = [[UILabel alloc] init];
     sourceView.font = CZSourceFont;
+    sourceView.textColor = [UIColor lightGrayColor];
     [self addSubview:sourceView];
     _sourceView = sourceView;
     
@@ -92,7 +93,7 @@
     _textView = textView;
 }
 
-- (void)setStatus:(LSStatusFrame *)status
+- (void)setStatus:(LSStatusFrame *)status   // 该方法每次都会被调用
 {
     _status = status;
     // 设置frame
@@ -126,7 +127,6 @@
     _timeView.text = status.created_at;
     
     // 来源
-    
     _sourceView.text = status.source;
     
     // 正文
@@ -135,6 +135,7 @@
 #pragma mark ------ 设置frame
 - (void)setUpFrame
 {
+    LSStatusesModel * status = _status.status;
     // 头像
     _iconView.frame = _status.originalIconFrame;
     
@@ -148,11 +149,22 @@
     }else{
         _vipView.hidden = YES;
     }
-    // 时间
-    _timeView.frame = _status.originalTimeFrame;
+    // 时间  该方法只被调用了一次
+    CGFloat timeX = _nameView.frame.origin.x;
+    CGFloat timeY = CGRectGetMaxY(_nameView.frame) + CZStatusCellMargin * 0.5;
+//    CGSize timeSize = [status.created_at sizeWithFont:CZTimeFont];
+    NSMutableDictionary * timeDic = [NSMutableDictionary dictionary];
+    timeDic[NSFontAttributeName] = CZTimeFont;
+    CGSize timeSize = [status.created_at sizeWithAttributes:timeDic];
+    _timeView.frame = (CGRect){{timeX,timeY},timeSize};
     
     // 来源
-    _sourceView.frame = _status.originalSourceFrame;
+    CGFloat sourceX = CGRectGetMaxX(_timeView.frame) + CZStatusCellMargin;
+    CGFloat sourceY = timeY;
+    NSMutableDictionary * sourceDic = [NSMutableDictionary dictionary];
+    sourceDic[NSFontAttributeName] = CZSourceFont;
+    CGSize sourceSize = [status.source sizeWithAttributes:sourceDic];
+    _sourceView.frame = (CGRect){{sourceX,sourceY},sourceSize};
     
     // 正文
     _textView.frame = _status.originalTextFrame;

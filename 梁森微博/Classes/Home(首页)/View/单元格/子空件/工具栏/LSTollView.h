@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class LSStatusFrame;
-@interface LSTollView : UIView
+@interface LSTollView : UIImageView
 /**
  *  视图模型属性
  */

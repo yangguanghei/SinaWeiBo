@@ -19,6 +19,10 @@
  */
 @property (nonatomic, strong) LSStatusesModel * retweeted_status;
 /**
+ *  转发微博用户名
+ */
+@property (nonatomic, copy) NSString * retweetedName;
+/**
  *  用户
  */
 @property (nonatomic, strong) LSUser * user;

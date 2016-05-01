@@ -38,6 +38,7 @@
     // 昵称
     UILabel *nameView = [[UILabel alloc] init];
     nameView.font = CZNameFont;
+    nameView.textColor= [UIColor blueColor];
     [self addSubview:nameView];
     _nameView = nameView;
     
@@ -55,7 +56,7 @@
     LSStatusesModel *status = statusF.status;
     // 昵称
     _nameView.frame = statusF.retweetNameFrame;
-    _nameView.text = status.retweeted_status.user.name;
+    _nameView.text = status.retweetedName;
     
     // 正文
     _textView.frame = statusF.retweetTextFrame;

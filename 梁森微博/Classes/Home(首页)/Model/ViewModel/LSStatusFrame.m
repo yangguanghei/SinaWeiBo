@@ -48,6 +48,9 @@
     CGFloat nameX = CGRectGetMaxX(_originalIconFrame) + CZStatusCellMargin;
     CGFloat nameY = imageY;
     CGSize nameSize = [_status.user.name sizeWithFont:CZNameFont];
+//    NSMutableDictionary * dic = [NSMutableDictionary dictionary];
+//    dic[NSFontAttributeName] = CZNameFont;
+//    CGSize nameSize = [_status.user.name sizeWithAttributes:dic];
     _originalNameFrame = (CGRect){{nameX,nameY},nameSize};
     
     // vip
@@ -60,22 +63,16 @@
     }
     
     // 时间
-    CGFloat timeX = nameX;
-    CGFloat timeY = CGRectGetMaxY(_originalNameFrame) + CZStatusCellMargin * 0.5;
-    CGSize timeSize = [_status.created_at sizeWithFont:CZTimeFont];
-    _originalTimeFrame = (CGRect){{timeX,timeY},timeSize};
     
     // 来源
-    CGFloat sourceX = CGRectGetMaxX(_originalTimeFrame) + CZStatusCellMargin;
-    CGFloat sourceY = timeY;
-    CGSize sourceSize = [_status.source sizeWithFont:CZSourceFont];
-    _originalSourceFrame = (CGRect){{sourceX,sourceY},sourceSize};
     
     // 正文
     CGFloat textX = imageX;
     CGFloat textY = CGRectGetMaxY(_originalIconFrame) + CZStatusCellMargin;
-    
     CGFloat textW = CZScreenW - 2 * CZStatusCellMargin;
+//    NSMutableDictionary * textDic = [NSMutableDictionary dictionary];
+//    textDic[NSFontAttributeName] = CZTextFont;
+//    CGRect textRect = [_status.text boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesFontLeading attributes:textDic context:nil];
     CGSize textSize = [_status.text sizeWithFont:CZTextFont constrainedToSize:CGSizeMake(textW, MAXFLOAT)];
     _originalTextFrame = (CGRect){{textX,textY},textSize};
     
@@ -96,17 +93,24 @@
     CGFloat nameX = CZStatusCellMargin;
     CGFloat nameY = nameX;
     // 注意：一定要是转发微博的用户昵称
-    CGSize nameSize = [_status.retweeted_status.user.name sizeWithFont:CZNameFont];
+    NSMutableDictionary * nameDic = [NSMutableDictionary dictionary];
+    nameDic[NSFontAttributeName] = CZNameFont;
+    CGSize nameSize = [_status.retweetedName sizeWithAttributes:nameDic];
     _retweetNameFrame = (CGRect){{nameX,nameY},nameSize};
     
     // 正文
-    CGFloat textX = nameX;
+//    CGFloat textX = nameX;
+    CGFloat textX = 30;
     CGFloat textY = CGRectGetMaxY(_retweetNameFrame) + CZStatusCellMargin;
     
-    CGFloat textW = CZScreenW - 2 * CZStatusCellMargin;
+//    CGFloat textW = CZScreenW - 2 * CZStatusCellMargin;
+    CGFloat textW = CZScreenW - 30 - 30;
     // 注意：一定要是转发微博的正文
-    CGSize textSize = [_status.retweeted_status.text sizeWithFont:CZTextFont constrainedToSize:CGSizeMake(textW, MAXFLOAT)];
-    _retweetTextFrame = (CGRect){{textX,textY},textSize};
+    NSMutableDictionary * textDic = [NSMutableDictionary dictionary];
+    textDic[NSFontAttributeName] = CZTextFont;
+//    CGSize textSize = [_status.retweeted_status.text sizeWithFont:CZTextFont constrainedToSize:CGSizeMake(textW, MAXFLOAT)];
+    CGRect textRect = [_status.retweeted_status.text boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:textDic context:nil];
+    _retweetTextFrame = (CGRect){{textX,textY},textRect.size};
     
     // 原创微博的frame
     CGFloat retweetX = 0;

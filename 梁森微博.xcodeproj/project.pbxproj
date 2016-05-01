@@ -73,6 +73,7 @@
 		C1212E6E1CCDC4BF00F76D4E /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C1212E641CCDC4BF00F76D4E /* UIScrollView+MJExtension.m */; };
 		C1212E6F1CCDC4BF00F76D4E /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C1212E661CCDC4BF00F76D4E /* UIScrollView+MJRefresh.m */; };
 		C1212E701CCDC4BF00F76D4E /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C1212E681CCDC4BF00F76D4E /* UIView+MJExtension.m */; };
+		C12E94561CD225CA0071768F /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E94551CD225CA0071768F /* NSDate+MJ.m */; };
 		C13F7BBC1CC750C8003C47C8 /* LSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C13F7BBB1CC750C8003C47C8 /* LSUser.m */; };
 		C13F7BBF1CC751A1003C47C8 /* LSPhonto.m in Sources */ = {isa = PBXBuildFile; fileRef = C13F7BBE1CC751A1003C47C8 /* LSPhonto.m */; };
 		C13F7BD01CC75268003C47C8 /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C13F7BC21CC75268003C47C8 /* MJConst.m */; };
@@ -258,6 +259,8 @@
 		C1212E661CCDC4BF00F76D4E /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		C1212E671CCDC4BF00F76D4E /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		C1212E681CCDC4BF00F76D4E /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		C12E94541CD225CA0071768F /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
+		C12E94551CD225CA0071768F /* NSDate+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MJ.m"; sourceTree = "<group>"; };
 		C13F7BBA1CC750C8003C47C8 /* LSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSUser.h; sourceTree = "<group>"; };
 		C13F7BBB1CC750C8003C47C8 /* LSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSUser.m; sourceTree = "<group>"; };
 		C13F7BBD1CC751A1003C47C8 /* LSPhonto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPhonto.h; sourceTree = "<group>"; };
@@ -785,6 +788,7 @@
 		15FACEEA1CB74B4000DDDD76 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				C12E94531CD225CA0071768F /* MJ时间分类 */,
 				15FACF1B1CB7638400DDDD76 /* UIView+Frame.h */,
 				15FACF1C1CB7638400DDDD76 /* UIView+Frame.m */,
 				15FACEEB1CB74B4000DDDD76 /* UIImage+LSImage.h */,
@@ -940,6 +944,15 @@
 				C1212E681CCDC4BF00F76D4E /* UIView+MJExtension.m */,
 			);
 			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		C12E94531CD225CA0071768F /* MJ时间分类 */ = {
+			isa = PBXGroup;
+			children = (
+				C12E94541CD225CA0071768F /* NSDate+MJ.h */,
+				C12E94551CD225CA0071768F /* NSDate+MJ.m */,
+			);
+			path = "MJ时间分类";
 			sourceTree = "<group>";
 		};
 		C13F7BC01CC75268003C47C8 /* MJExtension */ = {
@@ -1218,6 +1231,7 @@
 				15FACF0E1CB75ADF00DDDD76 /* LSDiscoverViewController.m in Sources */,
 				15B99B2E1CC0E8640062919F /* LSNewFeatureCell.m in Sources */,
 				15FACF201CB77CBE00DDDD76 /* UIBarButtonItem+Item.m in Sources */,
+				C12E94561CD225CA0071768F /* NSDate+MJ.m in Sources */,
 				C13F7BD21CC75268003C47C8 /* MJIvar.m in Sources */,
 				15D335FF1CC487850066D03D /* UIRefreshControl+AFNetworking.m in Sources */,
 				15D3360E1CC4D5C50066D03D /* LSAccountTool.m in Sources */,

@@ -71,7 +71,7 @@
  */
 // 在视图控制中将视图模型传递过来
 
-- (void)setStatus:(LSStatusFrame *)status
+- (void)setStatus:(LSStatusFrame *)status   // 该方法会每次都被调用
 {
     _status = status;
     // 设置原创微博frame
