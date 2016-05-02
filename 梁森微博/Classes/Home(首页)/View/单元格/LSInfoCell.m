@@ -85,6 +85,7 @@
     
     // 设置工具条frame
     _toll.frame = status.toolBarFrame;
+    _toll.statusF = status;
 }
 
 - (void)awakeFromNib {
