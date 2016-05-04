@@ -14,6 +14,8 @@
 
 // 下载图片第三方
 #import "UIImageView+WebCache.h"
+// 配图视图
+#import "LSPhotosView.h"
 @interface LSOriginalView()
 // 头像
 @property (nonatomic, weak) UIImageView *iconView;
@@ -36,6 +38,10 @@
 
 // 正文
 @property (nonatomic, weak) UILabel *textView;
+
+@property (nonatomic, strong) LSPhotosView * photosView;
+
+
 @end
 
 @implementation LSOriginalView
@@ -91,6 +97,11 @@
     textView.numberOfLines = 0;
     [self addSubview:textView];
     _textView = textView;
+    
+    // 配图
+    LSPhotosView * photosView = [[LSPhotosView alloc] init];
+    [self addSubview:photosView];
+    _photosView = photosView;
 }
 
 - (void)setStatus:(LSStatusFrame *)status   // 该方法每次都会被调用
@@ -168,6 +179,9 @@
     
     // 正文
     _textView.frame = _status.originalTextFrame;
+    
+    // 配图
+    _photosView.frame = _status.originalPhotosFrame;
     
     
 }

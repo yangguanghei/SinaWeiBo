@@ -57,7 +57,7 @@
 /**
  *  配图数组
  */
-@property (nonatomic, strong) NSArray * pic_ids;
+@property (nonatomic, strong) NSArray * pic_urls;
 
 
 @end

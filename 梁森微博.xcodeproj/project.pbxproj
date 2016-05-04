@@ -74,6 +74,7 @@
 		C1212E6F1CCDC4BF00F76D4E /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C1212E661CCDC4BF00F76D4E /* UIScrollView+MJRefresh.m */; };
 		C1212E701CCDC4BF00F76D4E /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C1212E681CCDC4BF00F76D4E /* UIView+MJExtension.m */; };
 		C12E94561CD225CA0071768F /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = C12E94551CD225CA0071768F /* NSDate+MJ.m */; };
+		C12F9D271CD98E48003CC7FC /* LSPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = C12F9D261CD98E48003CC7FC /* LSPhotosView.m */; };
 		C13F7BBC1CC750C8003C47C8 /* LSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C13F7BBB1CC750C8003C47C8 /* LSUser.m */; };
 		C13F7BBF1CC751A1003C47C8 /* LSPhonto.m in Sources */ = {isa = PBXBuildFile; fileRef = C13F7BBE1CC751A1003C47C8 /* LSPhonto.m */; };
 		C13F7BD01CC75268003C47C8 /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C13F7BC21CC75268003C47C8 /* MJConst.m */; };
@@ -261,6 +262,8 @@
 		C1212E681CCDC4BF00F76D4E /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		C12E94541CD225CA0071768F /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
 		C12E94551CD225CA0071768F /* NSDate+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MJ.m"; sourceTree = "<group>"; };
+		C12F9D251CD98E48003CC7FC /* LSPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPhotosView.h; sourceTree = "<group>"; };
+		C12F9D261CD98E48003CC7FC /* LSPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPhotosView.m; sourceTree = "<group>"; };
 		C13F7BBA1CC750C8003C47C8 /* LSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSUser.h; sourceTree = "<group>"; };
 		C13F7BBB1CC750C8003C47C8 /* LSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSUser.m; sourceTree = "<group>"; };
 		C13F7BBD1CC751A1003C47C8 /* LSPhonto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPhonto.h; sourceTree = "<group>"; };
@@ -871,6 +874,7 @@
 		C1109F371CD0AEAA00A9BA83 /* 子空件 */ = {
 			isa = PBXGroup;
 			children = (
+				C12F9D241CD98E35003CC7FC /* 配图 */,
 				C1109F391CD0AED700A9BA83 /* 原创 */,
 				C1109F3A1CD0AED700A9BA83 /* 转发 */,
 				C1109F381CD0AED700A9BA83 /* 工具栏 */,
@@ -953,6 +957,15 @@
 				C12E94551CD225CA0071768F /* NSDate+MJ.m */,
 			);
 			path = "MJ时间分类";
+			sourceTree = "<group>";
+		};
+		C12F9D241CD98E35003CC7FC /* 配图 */ = {
+			isa = PBXGroup;
+			children = (
+				C12F9D251CD98E48003CC7FC /* LSPhotosView.h */,
+				C12F9D261CD98E48003CC7FC /* LSPhotosView.m */,
+			);
+			path = "配图";
 			sourceTree = "<group>";
 		};
 		C13F7BC01CC75268003C47C8 /* MJExtension */ = {
@@ -1184,6 +1197,7 @@
 				C1B29C391CC732710019752D /* LSStatusesModel.m in Sources */,
 				C13F7C031CC754D8003C47C8 /* SDWebImageManager.m in Sources */,
 				C1212E6D1CCDC4BF00F76D4E /* MJRefreshHeaderView.m in Sources */,
+				C12F9D271CD98E48003CC7FC /* LSPhotosView.m in Sources */,
 				C10013051CD0C2280003E7D6 /* LSStatusParam.m in Sources */,
 				C13F7BFD1CC754D8003C47C8 /* SDImageCache.m in Sources */,
 				C13F7C021CC754D8003C47C8 /* SDWebImageManager+MJ.m in Sources */,

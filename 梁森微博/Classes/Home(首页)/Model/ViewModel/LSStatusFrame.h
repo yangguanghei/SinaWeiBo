@@ -50,7 +50,10 @@
  *  正文Frame
  */
 @property (nonatomic, assign) CGRect originalTextFrame;
-
+/**
+ *   配图Frame
+ */
+@property (nonatomic, assign) CGRect originalPhotosFrame;
 
 
 
@@ -69,6 +72,10 @@
  *  正文Frame
  */
 @property (nonatomic, assign) CGRect retweetTextFrame;
+/**
+ *  配图Frame
+ */
+@property (nonatomic, assign) CGRect retweetPhotosFrame;
 
 /**
  *  工具条frame

@@ -10,6 +10,8 @@
 
 #import "LSStatusesModel.h"
 #import "LSStatusFrame.h"
+// 配图视图
+#import "LSPhotosView.h"
 @interface LSRetransmissionView()
 // 昵称
 @property (nonatomic, weak) UILabel *nameView;
@@ -17,6 +19,10 @@
 
 // 正文
 @property (nonatomic, weak) UILabel *textView;
+/**
+ *  配图
+ */
+@property (nonatomic, strong) LSPhotosView * photosView;
 @end
 
 @implementation LSRetransmissionView
@@ -49,6 +55,10 @@
     textView.numberOfLines = 0;
     [self addSubview:textView];
     _textView = textView;
+    
+    LSPhotosView * photosView = [[LSPhotosView alloc] init];
+    [self addSubview:photosView];
+    _photosView = photosView;
 }
 - (void)setStatusF:(LSStatusFrame *)statusF
 {
@@ -61,6 +71,9 @@
     // 正文
     _textView.frame = statusF.retweetTextFrame;
     _textView.text = status.retweeted_status.text;
+    
+    // 配图
+    _photosView.frame = statusF.retweetPhotosFrame;
 }
 
 @end

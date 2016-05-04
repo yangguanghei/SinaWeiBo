@@ -48,9 +48,6 @@
     CGFloat nameX = CGRectGetMaxX(_originalIconFrame) + CZStatusCellMargin;
     CGFloat nameY = imageY;
     CGSize nameSize = [_status.user.name sizeWithFont:CZNameFont];
-//    NSMutableDictionary * dic = [NSMutableDictionary dictionary];
-//    dic[NSFontAttributeName] = CZNameFont;
-//    CGSize nameSize = [_status.user.name sizeWithAttributes:dic];
     _originalNameFrame = (CGRect){{nameX,nameY},nameSize};
     
     // vip
@@ -75,13 +72,40 @@
 //    CGRect textRect = [_status.text boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesFontLeading attributes:textDic context:nil];
     CGSize textSize = [_status.text sizeWithFont:CZTextFont constrainedToSize:CGSizeMake(textW, MAXFLOAT)];
     _originalTextFrame = (CGRect){{textX,textY},textSize};
+
+    // 配图
+    CGFloat originH = CGRectGetMaxY(_originalTextFrame) + CZStatusCellMargin;
+    if (_status.pic_urls.count) {
+        NSLog(@"原创微博配图数组的个数:%lu", _status.pic_urls.count);
+        CGFloat photosX = CZStatusCellMargin;
+        CGFloat photosY = CGRectGetMaxY(_originalTextFrame) + CZStatusCellMargin;
+        // 计算配图视图的大小（根据图片的数量）
+        CGSize photosSize = [self photosSizeWithCount:_status.pic_urls.count];
+//        CGSize photosSize = [self photosSizeWithCount:3];
+        _originalPhotosFrame = (CGRect){{photosX,photosY},photosSize};
+        originH = CGRectGetMaxY(_originalPhotosFrame) + CZStatusCellMargin;
+    }
     
     // 原创微博的frame
     CGFloat originX = 0;
     CGFloat originY = 10;
     CGFloat originW = CZScreenW;
-    CGFloat originH = CGRectGetMaxY(_originalTextFrame) + CZStatusCellMargin;
     _originalViewFrame = CGRectMake(originX, originY, originW, originH);
+    
+}
+#pragma mark - 计算配图的尺寸
+- (CGSize)photosSizeWithCount:(NSUInteger)count
+{
+    // 获取总列数
+    NSUInteger cols = count == 4? 2 : 3;
+    // 获取总行数 = (总个数 - 1) / 总列数 + 1
+    NSUInteger rols = (count - 1) / cols + 1;
+    CGFloat photoWH = 70;
+    CGFloat w = cols * photoWH + (cols - 1) * CZStatusCellMargin;
+    CGFloat h = rols * photoWH + (rols - 1) * CZStatusCellMargin;
+    
+    
+    return CGSizeMake(w, h);
     
 }
 
@@ -112,11 +136,24 @@
     CGRect textRect = [_status.retweeted_status.text boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:textDic context:nil];
     _retweetTextFrame = (CGRect){{textX,textY},textRect.size};
     
-    // 原创微博的frame
+    // 配图
+    CGFloat retweetH = CGRectGetMaxY(_retweetTextFrame) + CZStatusCellMargin;
+    if (_status.retweeted_status.pic_urls.count) {
+        NSLog(@"转发配图数组的个数:%lu", _status.retweeted_status.pic_urls.count);
+        CGFloat photosX = CZStatusCellMargin;
+        CGFloat photosY = CGRectGetMaxY(_retweetTextFrame) + CZStatusCellMargin;
+        // 计算配图视图的大小（根据图片的数量）
+        CGSize photosSize = [self photosSizeWithCount:_status.retweeted_status.pic_urls.count];
+//        NSUInteger a = 3;
+//        CGSize photosSize = [self photosSizeWithCount:3];
+        _retweetPhotosFrame = (CGRect){{photosX,photosY},photosSize};
+        retweetH = CGRectGetMaxY(_retweetPhotosFrame) + CZStatusCellMargin;
+    }
+    
+    // 转发微博的frame
     CGFloat retweetX = 0;
     CGFloat retweetY = CGRectGetMaxY(_originalViewFrame);
     CGFloat retweetW = CZScreenW;
-    CGFloat retweetH = CGRectGetMaxY(_retweetTextFrame) + CZStatusCellMargin;
     _retweetViewFrame = CGRectMake(retweetX, retweetY, retweetW, retweetH);
     
 }
