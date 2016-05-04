@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface LSPhotosView : UIView
+/**
+ *  用于接收图片数组
+ */
+@property (nonatomic, strong) NSArray * pic_urls;
 
 @end

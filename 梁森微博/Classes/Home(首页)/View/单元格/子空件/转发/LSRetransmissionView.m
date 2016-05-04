@@ -74,6 +74,7 @@
     
     // 配图
     _photosView.frame = statusF.retweetPhotosFrame;
+    _photosView.pic_urls = statusF.status.retweeted_status.pic_urls;
 }
 
 @end

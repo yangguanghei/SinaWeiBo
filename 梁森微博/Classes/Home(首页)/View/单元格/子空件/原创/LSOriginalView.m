@@ -182,6 +182,7 @@
     
     // 配图
     _photosView.frame = _status.originalPhotosFrame;
+    _photosView.pic_urls = _status.status.pic_urls;
     
     
 }
