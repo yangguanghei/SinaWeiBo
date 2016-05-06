@@ -54,7 +54,7 @@
         
         
         NSArray * statusesArr = responseObject[@"statuses"];
-        // 将字典数组直接转换成模型数据  李明杰写的第三方
+        // 将字典数组直接转换成模型数组  李明杰写的第三方
         NSArray * modelArr = [LSStatusesModel objectArrayWithKeyValuesArray:statusesArr];
         
         if (success) {

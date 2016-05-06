@@ -11,6 +11,11 @@
 #import "UIImageView+WebCache.h"
 // 图片模型
 #import "LSPhonto.h"
+// 第三方图片浏览器
+#import "MJPhoto.h"
+#import "MJPhotoBrowser.h"
+// 自定义的imageView
+#import "LSPhotoView.h"
 @implementation LSPhotosView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -26,12 +31,39 @@
 {
     // 最多显示9张图片
     for (int i = 0 ; i < 9 ; i ++) {
-        UIImageView * imageView = [[UIImageView alloc] init];
-        imageView.contentMode = UIViewContentModeScaleAspectFill;
-        // 裁剪图片，超出控件的部分裁剪掉
-        imageView.clipsToBounds = YES;
+        LSPhotoView * imageView = [[LSPhotoView alloc] init];
+        imageView.tag = i;
+        UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)];
+        [imageView addGestureRecognizer:tap];
         [self addSubview:imageView];
     }
+}
+- (void)tapClick:(UITapGestureRecognizer *)tap
+{
+    UIImageView *tapView = (UIImageView *)tap.view;
+    // CZPhoto -> MJPhoto
+    int i = 0;
+    NSMutableArray *arrM = [NSMutableArray array];
+    for (LSPhonto *photo in _pic_urls) {
+        
+        MJPhoto *p = [[MJPhoto alloc] init];
+        NSString *urlStr = photo.thumbnail_pic.absoluteString;
+        urlStr = [urlStr stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+        p.url = [NSURL URLWithString:urlStr];
+        p.index = i;
+        p.srcImageView = tapView;
+        [arrM addObject:p];
+        i++;
+    }
+    
+    
+    // 弹出图片浏览器
+    // 创建浏览器对象
+    MJPhotoBrowser *brower = [[MJPhotoBrowser alloc] init];
+    // MJPhoto
+    brower.photos = arrM;
+    brower.currentPhotoIndex = tapView.tag;
+    [brower show];
 }
 
 - (void)setPic_urls:(NSArray *)pic_urls
@@ -39,13 +71,14 @@
     _pic_urls = pic_urls;
     NSUInteger counts = self.subviews.count;
     for (int i = 0; i < counts; i ++) {
-        UIImageView * imageView = self.subviews[i];
+        LSPhotoView * imageView = self.subviews[i];
         // 9张图片以内显示上传的所有图片
         if (i < _pic_urls.count) {
             // 显示
             imageView.hidden = NO;
             LSPhonto * photo = _pic_urls[i];
-            [imageView sd_setImageWithURL:photo.thumbnail_pic placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+            imageView.photo = photo;
+            
         }else
         {
             // 隐藏
