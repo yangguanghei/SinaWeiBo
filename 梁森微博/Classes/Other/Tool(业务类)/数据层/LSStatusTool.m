@@ -18,6 +18,21 @@
 #import "LSAccountTool.h"
 @implementation LSStatusTool
 
++ (void)PostText:(NSString *)URLString parameters:(id)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure
+{
+    [LSHttpTool Post:URLString parameters:parameters success:^(id responseObject) {
+        
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(NSError *error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
 + (void)newStatusWithSinceId:(NSString *)sinceId success:(void (^)(NSArray *))success failure:(void (^)(NSError *))failure
 {
     

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LSSendToolBarDelegate <NSObject>
+
+- (void)sendToolBarWithBtn:(NSInteger)index;
+
+@end
+
 @interface LSSendToolBar : UIView
+
+@property (nonatomic, assign) id <LSSendToolBarDelegate> delegate;
 
 @end

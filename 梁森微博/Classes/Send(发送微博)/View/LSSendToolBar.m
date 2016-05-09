@@ -45,12 +45,38 @@
     
     [btn addTarget:target action:action forControlEvents:controlEvents];
     
+    btn.tag = self.subviews.count;
+    
     [self addSubview:btn];
 }
 
 - (void)sendBtn:(UIButton *)btn
 {
-    NSLog(@".....");
+    NSLog(@".....%lu", btn.tag);
+    switch (btn.tag) {
+        case 0:
+            if ([self.delegate respondsToSelector:@selector(sendToolBarWithBtn:)]) {
+                [self.delegate sendToolBarWithBtn:0];
+            } else
+            {
+                NSLog(@"LSSendToolBar的代理没有响应....");
+            }
+            break;
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        case 4:
+            
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark ------ 对子控件进行布局
