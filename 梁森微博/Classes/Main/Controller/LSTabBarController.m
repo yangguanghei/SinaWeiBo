@@ -17,7 +17,9 @@
 #import "LSProfileViewController.h"
 
 #import "LSNavigationController.h"
-@interface LSTabBarController ()<UITabBarDelegate>
+// 发送微博的视图控制器
+#import "LSSendViewController.h"
+@interface LSTabBarController ()<UITabBarDelegate, LSTabBarDelegate>
 
 @property (nonatomic, strong)LSHomeViewController * homeVC;
 @property (nonatomic, strong) LSMessageViewController * messageVC;
@@ -40,6 +42,7 @@
     
     LSTabBar * lsTabBar = [[LSTabBar alloc] initWithFrame:self.tabBar.frame];
     lsTabBar.delegate = self;
+    lsTabBar.sendDelegate = self;
     
     //    self.tabBar = lsTabBar;
     // 利用KVC对进行赋值，改变只读属性
@@ -168,6 +171,14 @@
     
     //调用父类的setSelectedIndex
     [super setSelectedIndex:selectedIndex];
+}
+
+#pragma mark -------- LSTabBarDelegate
+- (void)sendMessageAction
+{
+    LSSendViewController * sendVC = [[LSSendViewController alloc] init];
+    LSNavigationController * nav = [[LSNavigationController alloc] initWithRootViewController:sendVC];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

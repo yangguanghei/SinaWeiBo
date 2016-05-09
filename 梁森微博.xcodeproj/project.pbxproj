@@ -109,6 +109,7 @@
 		C13F7C091CC754D8003C47C8 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C13F7BF61CC754D8003C47C8 /* UIImageView+HighlightedWebCache.m */; };
 		C13F7C0A1CC754D8003C47C8 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C13F7BF81CC754D8003C47C8 /* UIImageView+WebCache.m */; };
 		C13F7C0B1CC754D8003C47C8 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C13F7BFA1CC754D8003C47C8 /* UIView+WebCacheOperation.m */; };
+		C1853C681CE0275B00F00422 /* LSSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1853C671CE0275B00F00422 /* LSSendViewController.m */; };
 		C1B29C361CC72AE20019752D /* LSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B29C351CC72AE20019752D /* LSHomeViewController.m */; };
 		C1B29C391CC732710019752D /* LSStatusesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B29C381CC732710019752D /* LSStatusesModel.m */; };
 		C1CA22CA1CCF6252009CBAC5 /* LSParamers.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CA22C91CCF6252009CBAC5 /* LSParamers.m */; };
@@ -342,6 +343,8 @@
 		C13F7BF81CC754D8003C47C8 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		C13F7BF91CC754D8003C47C8 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		C13F7BFA1CC754D8003C47C8 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		C1853C661CE0275B00F00422 /* LSSendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSendViewController.h; sourceTree = "<group>"; };
+		C1853C671CE0275B00F00422 /* LSSendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSendViewController.m; sourceTree = "<group>"; };
 		C1B29C341CC72AE20019752D /* LSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSHomeViewController.h; sourceTree = "<group>"; };
 		C1B29C351CC72AE20019752D /* LSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSHomeViewController.m; sourceTree = "<group>"; };
 		C1B29C371CC732710019752D /* LSStatusesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSStatusesModel.h; sourceTree = "<group>"; };
@@ -630,6 +633,7 @@
 			children = (
 				15D335BD1CC484050066D03D /* OAuth(授权) */,
 				15B99B221CC0E3430062919F /* NewFeatures(新特性) */,
+				C1853C651CE0274400F00422 /* Send(发送微博) */,
 				15FACED71CB74B4000DDDD76 /* Home(首页) */,
 				15FACEE31CB74B4000DDDD76 /* Message(消息) */,
 				15FACED31CB74B4000DDDD76 /* Discover(发现) */,
@@ -1083,6 +1087,16 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		C1853C651CE0274400F00422 /* Send(发送微博) */ = {
+			isa = PBXGroup;
+			children = (
+				C1853C661CE0275B00F00422 /* LSSendViewController.h */,
+				C1853C671CE0275B00F00422 /* LSSendViewController.m */,
+			);
+			name = "Send(发送微博)";
+			path = "OAuth(授权)/Send(发送微博)";
+			sourceTree = "<group>";
+		};
 		C1CA22C71CCF623C009CBAC5 /* 参数模型 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1257,6 +1271,7 @@
 				C1212E6C1CCDC4BF00F76D4E /* MJRefreshFooterView.m in Sources */,
 				C13F7C001CC754D8003C47C8 /* SDWebImageDownloader.m in Sources */,
 				15D335FE1CC487850066D03D /* UIProgressView+AFNetworking.m in Sources */,
+				C1853C681CE0275B00F00422 /* LSSendViewController.m in Sources */,
 				15D335F41CC487850066D03D /* AFSecurityPolicy.m in Sources */,
 				15B99B1B1CC094750062919F /* LSOneViewController.m in Sources */,
 				C1212E571CCDC24B00F76D4E /* LSHttpTool.m in Sources */,
