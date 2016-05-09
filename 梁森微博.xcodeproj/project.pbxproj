@@ -111,6 +111,7 @@
 		C13F7C0B1CC754D8003C47C8 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C13F7BFA1CC754D8003C47C8 /* UIView+WebCacheOperation.m */; };
 		C1853C7D1CE03CF600F00422 /* LSSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1853C7A1CE03CF600F00422 /* LSSendViewController.m */; };
 		C1853C801CE03D8300F00422 /* LSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1853C7F1CE03D8300F00422 /* LSTextView.m */; };
+		C1853C861CE0728000F00422 /* LSSendToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C1853C851CE0728000F00422 /* LSSendToolBar.m */; };
 		C1B29C361CC72AE20019752D /* LSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B29C351CC72AE20019752D /* LSHomeViewController.m */; };
 		C1B29C391CC732710019752D /* LSStatusesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B29C381CC732710019752D /* LSStatusesModel.m */; };
 		C1CA22CA1CCF6252009CBAC5 /* LSParamers.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CA22C91CCF6252009CBAC5 /* LSParamers.m */; };
@@ -348,6 +349,8 @@
 		C1853C7A1CE03CF600F00422 /* LSSendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSendViewController.m; sourceTree = "<group>"; };
 		C1853C7E1CE03D8300F00422 /* LSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTextView.h; sourceTree = "<group>"; };
 		C1853C7F1CE03D8300F00422 /* LSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTextView.m; sourceTree = "<group>"; };
+		C1853C841CE0728000F00422 /* LSSendToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSSendToolBar.h; sourceTree = "<group>"; };
+		C1853C851CE0728000F00422 /* LSSendToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSSendToolBar.m; sourceTree = "<group>"; };
 		C1B29C341CC72AE20019752D /* LSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSHomeViewController.h; sourceTree = "<group>"; };
 		C1B29C351CC72AE20019752D /* LSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSHomeViewController.m; sourceTree = "<group>"; };
 		C1B29C371CC732710019752D /* LSStatusesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSStatusesModel.h; sourceTree = "<group>"; };
@@ -1121,6 +1124,8 @@
 			children = (
 				C1853C7E1CE03D8300F00422 /* LSTextView.h */,
 				C1853C7F1CE03D8300F00422 /* LSTextView.m */,
+				C1853C841CE0728000F00422 /* LSSendToolBar.h */,
+				C1853C851CE0728000F00422 /* LSSendToolBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1369,6 +1374,7 @@
 				C1EE42AF1CCF181400623E3C /* LSStatusTool.m in Sources */,
 				C1212E6F1CCDC4BF00F76D4E /* UIScrollView+MJRefresh.m in Sources */,
 				15D335C31CC4842E0066D03D /* LSOAuthViewController.m in Sources */,
+				C1853C861CE0728000F00422 /* LSSendToolBar.m in Sources */,
 				15D335F91CC487850066D03D /* AFNetworkActivityIndicatorManager.m in Sources */,
 				C1199CD51CD0D6F600AC8F13 /* LSStatusFrame.m in Sources */,
 				15FACEF61CB74B4000DDDD76 /* main.m in Sources */,
