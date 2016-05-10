@@ -18,6 +18,25 @@
 #import "LSAccountTool.h"
 @implementation LSHttpTool
 
++ (void)upload:(NSString *)URLString parameters:(id)parameters uploadParam:(LSUploadParam *)uploadPara success:(void (^)(id))success failure:(void (^)(NSError *))failure
+{
+    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        [formData appendPartWithFileData:uploadPara.data name:uploadPara.name fileName:uploadPara.fileName mimeType:uploadPara.mimeType];
+    } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
 + (void)GET:(NSString *)URLString parameters:(id)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
     AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];

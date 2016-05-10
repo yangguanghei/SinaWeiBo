@@ -118,6 +118,9 @@
 		C1CA22CA1CCF6252009CBAC5 /* LSParamers.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CA22C91CCF6252009CBAC5 /* LSParamers.m */; };
 		C1EE42AF1CCF181400623E3C /* LSStatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C1EE42AE1CCF181400623E3C /* LSStatusTool.m */; };
 		C1FD00791CDCA21C0006B11A /* LSPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FD00781CDCA21C0006B11A /* LSPhotoView.m */; };
+		C1FF61681CE18C9000BC8B9F /* LSComposeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FF61671CE18C9000BC8B9F /* LSComposeModel.m */; };
+		C1FF616B1CE18CD700BC8B9F /* LSBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FF616A1CE18CD700BC8B9F /* LSBaseParam.m */; };
+		C1FF616F1CE18E2A00BC8B9F /* LSUploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FF616E1CE18E2A00BC8B9F /* LSUploadParam.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -364,6 +367,12 @@
 		C1EE42AE1CCF181400623E3C /* LSStatusTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSStatusTool.m; sourceTree = "<group>"; };
 		C1FD00771CDCA21C0006B11A /* LSPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPhotoView.h; sourceTree = "<group>"; };
 		C1FD00781CDCA21C0006B11A /* LSPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPhotoView.m; sourceTree = "<group>"; };
+		C1FF61661CE18C9000BC8B9F /* LSComposeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSComposeModel.h; sourceTree = "<group>"; };
+		C1FF61671CE18C9000BC8B9F /* LSComposeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSComposeModel.m; sourceTree = "<group>"; };
+		C1FF61691CE18CD700BC8B9F /* LSBaseParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSBaseParam.h; sourceTree = "<group>"; };
+		C1FF616A1CE18CD700BC8B9F /* LSBaseParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSBaseParam.m; sourceTree = "<group>"; };
+		C1FF616D1CE18E2A00BC8B9F /* LSUploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSUploadParam.h; sourceTree = "<group>"; };
+		C1FF616E1CE18E2A00BC8B9F /* LSUploadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSUploadParam.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1118,6 +1127,9 @@
 		C1853C7B1CE03CF600F00422 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C1FF61661CE18C9000BC8B9F /* LSComposeModel.h */,
+				C1FF61671CE18C9000BC8B9F /* LSComposeModel.m */,
+				C1FF616C1CE18E0C00BC8B9F /* 上传数据模型 */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1140,6 +1152,8 @@
 			children = (
 				C1CA22C81CCF6252009CBAC5 /* LSParamers.h */,
 				C1CA22C91CCF6252009CBAC5 /* LSParamers.m */,
+				C1FF61691CE18CD700BC8B9F /* LSBaseParam.h */,
+				C1FF616A1CE18CD700BC8B9F /* LSBaseParam.m */,
 			);
 			path = "参数模型";
 			sourceTree = "<group>";
@@ -1151,6 +1165,15 @@
 				C1EE42AE1CCF181400623E3C /* LSStatusTool.m */,
 			);
 			path = "数据层";
+			sourceTree = "<group>";
+		};
+		C1FF616C1CE18E0C00BC8B9F /* 上传数据模型 */ = {
+			isa = PBXGroup;
+			children = (
+				C1FF616D1CE18E2A00BC8B9F /* LSUploadParam.h */,
+				C1FF616E1CE18E2A00BC8B9F /* LSUploadParam.m */,
+			);
+			path = "上传数据模型";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1300,6 +1323,7 @@
 				C1109F361CD0AE8C00A9BA83 /* LSInfoCell.m in Sources */,
 				C1B29C391CC732710019752D /* LSStatusesModel.m in Sources */,
 				C13F7C031CC754D8003C47C8 /* SDWebImageManager.m in Sources */,
+				C1FF616B1CE18CD700BC8B9F /* LSBaseParam.m in Sources */,
 				C1212E6D1CCDC4BF00F76D4E /* MJRefreshHeaderView.m in Sources */,
 				C1157F831CDB551A009D5801 /* MJPhotoView.m in Sources */,
 				C12F9D271CD98E48003CC7FC /* LSPhotosView.m in Sources */,
@@ -1310,6 +1334,7 @@
 				C13F7C001CC754D8003C47C8 /* SDWebImageDownloader.m in Sources */,
 				15D335FE1CC487850066D03D /* UIProgressView+AFNetworking.m in Sources */,
 				C1853C7D1CE03CF600F00422 /* LSSendViewController.m in Sources */,
+				C1FF61681CE18C9000BC8B9F /* LSComposeModel.m in Sources */,
 				15D335F41CC487850066D03D /* AFSecurityPolicy.m in Sources */,
 				15B99B1B1CC094750062919F /* LSOneViewController.m in Sources */,
 				C1212E571CCDC24B00F76D4E /* LSHttpTool.m in Sources */,
@@ -1364,6 +1389,7 @@
 				15D335F11CC487850066D03D /* AFHTTPRequestOperationManager.m in Sources */,
 				C13F7BD01CC75268003C47C8 /* MJConst.m in Sources */,
 				15D335F01CC487850066D03D /* AFHTTPRequestOperation.m in Sources */,
+				C1FF616F1CE18E2A00BC8B9F /* LSUploadParam.m in Sources */,
 				C1853C801CE03D8300F00422 /* LSTextView.m in Sources */,
 				15FACF1D1CB7638400DDDD76 /* UIView+Frame.m in Sources */,
 				C1109F431CD0AF8500A9BA83 /* LSTollView.m in Sources */,

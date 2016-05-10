@@ -16,7 +16,36 @@
 
 #import "LSAccount.h"
 #import "LSAccountTool.h"
+
+#import "LSComposeModel.h"
+// 上传参数模型
+#import "LSUploadParam.h"
 @implementation LSStatusTool
+// 上传图片
++ (void)composeWithStatus:(NSString *)status image:(UIImage *)image success:(void (^)())success failure:(void (^)(NSError *))failure
+{
+    LSComposeModel * param = [LSComposeModel param];
+    param.status = status;
+    
+    LSUploadParam * uploadParam = [[LSUploadParam alloc] init];
+    uploadParam.data = UIImagePNGRepresentation(image);
+    uploadParam.name = @"pic";
+    uploadParam.fileName = @"image.png";
+    uploadParam.mimeType = @"image/png";
+    
+    [LSHttpTool upload:@"https://upload.api.weibo.com/2/statuses/upload.json" parameters:param.keyValues uploadParam:uploadParam success:^(id responseObject) {
+        
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+        
+    }];
+}
+
 
 + (void)PostText:(NSString *)URLString parameters:(id)parameters success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {

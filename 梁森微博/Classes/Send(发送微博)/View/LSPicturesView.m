@@ -28,7 +28,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         
-        [self setUpChildView];
+//        [self setUpChildView];
     }
     
     return self;
